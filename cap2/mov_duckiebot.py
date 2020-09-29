@@ -69,11 +69,11 @@ while True:
         action = np.array([-0.44, 0.0])
 
     # Esto es para doblar a la izquierda al apretar la tecla a
-    if key==ord("a")
+    if key==ord('a')
         action = np.array([0.00, 0.44])
 
     # Esto es para doblar a la derecha al apretar la tecla d
-    if key == ord("a")
+    if key == ord('d')
         action = np.array([0.00, -0.44])
 
 
