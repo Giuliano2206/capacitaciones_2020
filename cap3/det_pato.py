@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
     # Parametros para el detector de patos
     # Se debe encontrar el rango apropiado
-    lower_yellow = np.array([15, 195, 175]) ######funciona
+    lower_yellow = np.array([15, 195, 175])
     upper_yellow = np.array([35, 255, 255])
     min_area = 2900
 
@@ -83,7 +83,7 @@ if __name__ == '__main__':
             print('done!')
             # En ese caso se reinicia el simulador
             env.reset()
-############################################################################################
+
         ### CÓDIGO DE DETECCIÓN POR COLOR ###
 
         #Transformar imagen a espacio HSV
@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
         #Operacion morfologica dilate
         mask_out2 = cv2.dilate(mask_out, kernel, iterations=3)
-        final=cv2.cvtColor(mask_out2, cv2.COLOR_RGB2BGR)
+        final=cv2.cvtColor(mask_out2, cv2.COLOR_RGB2BGR) #cambio de rgb a bgr
 
         # Busca contornos de blobs
         # https://docs.opencv.org/trunk/d3/d05/tutorial_py_table_of_contents_contours.html
@@ -126,7 +126,7 @@ if __name__ == '__main__':
         # con los bounding boxes dibujados
         cv2.imshow('patos', cv2.cvtColor(obs, cv2.COLOR_RGB2BGR))
         # Se muestra en una ventana llamada "filtrado" la imagen filtrada
-        cv2.imshow('filtrado', final)#colores cambiados
+        cv2.imshow('filtrado', final)
 
 
     # Se cierra el environment y termina el programa
